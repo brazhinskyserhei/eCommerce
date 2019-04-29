@@ -123,7 +123,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <i class="nav-icon fa fa-money-bill"></i>
                             <p>
                                 Заказы
-                                <span class="right badge badge-danger">4</span>
+                                <span class="right badge badge-danger">7</span>
                             </p>
                         </a>
                     </li>
