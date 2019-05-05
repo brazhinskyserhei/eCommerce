@@ -18,7 +18,8 @@ let routes = [
 ]
 
 const router = new VueRouter({
-    routes // сокращённая запись для `routes: routes`
+	routes,
+	mode: 'history'
 })
 
 /**
