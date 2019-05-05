@@ -11,13 +11,23 @@
 |
 */
 
-/*Route::prefix('admin')->group(function () {
-    Route::resource('categories', 'Admin\CategoryController');
-});*/
+Route::prefix('admin')->group(function () {
+	Route::get('/', function () {
+        return view('admin.layout');
+    });
+	
+	Route::get('{path}', function () {
+        return view('admin.layout');
+    })->where('path','([A-z\d-\/_.]+)?');
+	
+	//Route::get('{path}', 'HomeController@index')->where('path','([A-z\d-\/_.]+)?');
+    //Route::resource('categories', 'Admin\CategoryController');
+});
 
+/*
 Route::get('/admin', function () {
     return view('admin.layout');
-});
+});*/
 
 
 

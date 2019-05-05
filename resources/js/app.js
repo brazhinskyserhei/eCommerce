@@ -13,8 +13,8 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 let routes = [
-    { path: '/dashboard', component: require('./components/Dashboard.vue').default },
-    { path: '/profile', component: require('./components/Profile.vue').default }
+    { path: '/admin/dashboard', component: require('./components/Dashboard.vue').default },
+    { path: '/admin/categories', component: require('./components/Categories.vue').default }
 ]
 
 const router = new VueRouter({

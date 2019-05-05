@@ -81,8 +81,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
                     <li class="nav-item">
-                        <router-link to="/dashboard" class="nav-link">
-                            <i class="nav-icon fa fa-th"></i>
+                        <router-link to="/admin/dashboard" class="nav-link">
+                            <i class="nav-icon fa fa-th blue"></i>
                             <p>
                                 Главная
                                 <span class="right badge badge-danger">2</span>
@@ -91,8 +91,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     </li>
 
                     <li class="nav-item">
-                        <router-link to="/profile" class="nav-link">
-                            <i class="nav-icon fa fa-book"></i>
+                        <router-link to="/admin/categories" class="nav-link">
+                            <i class="nav-icon fa fa-book indigo"></i>
                             <p>
                                 Категории
                                 <span class="right badge badge-danger">4</span>
@@ -102,7 +102,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-cart-plus"></i>
+                            <i class="nav-icon fa fa-cart-plus orange"></i>
                             <p>
                                 Продукты
                                 <span class="right badge badge-danger">4</span>
@@ -112,7 +112,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-user"></i>
+                            <i class="nav-icon fa fa-user yellow"></i>
                             <p>
                                 Пользователи
                                 <span class="right badge badge-danger">4</span>
@@ -122,7 +122,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                     <li class="nav-item">
                         <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-money-bill"></i>
+                            <i class="nav-icon fa fa-money-bill teal"></i>
                             <p>
                                 Заказы
                                 <span class="right badge badge-danger">7</span>
@@ -130,15 +130,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fa fa-power-off"></i>
+                    <li class="nav-item">		
+						<a class="nav-link" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                       
+										<i class="nav-icon fa fa-power-off cyan"></i>
                             <p>
-                                Выйти
+                                 {{ __('Выйти') }}
                                 <span class="right badge badge-danger">7</span>
                             </p>
-                        </a>
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+						
+						
                     </li>
+					
+					
+					
+					
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
