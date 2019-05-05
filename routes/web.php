@@ -15,8 +15,12 @@
     Route::resource('categories', 'Admin\CategoryController');
 });*/
 
-Route::get('/home', function () {
+Route::get('/admin', function () {
     return view('admin.layout');
 });
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
